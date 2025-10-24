@@ -10,7 +10,7 @@ from mcp.client.stdio import stdio_client
 
 # Add parent directory to path to import base_agent
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from base_agent import BaseAgent
+from connectors.base_agent import BaseAgent
 
 
 class Agent(BaseAgent):

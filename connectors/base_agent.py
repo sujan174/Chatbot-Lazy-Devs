@@ -5,8 +5,9 @@ from typing import List, Dict, Any
 class BaseAgent(ABC):
     """Base class for all specialized agents"""
     
-    def __init__(self):
+    def __init__(self, user_id: str):
         self.name = self.__class__.__name__
+        self.user_id = user_id 
         self.initialized = False
     
     @abstractmethod
@@ -55,3 +56,4 @@ class BaseAgent(ABC):
     def _format_error(self, error: Exception) -> str:
         """Helper to format error messages"""
         return f"Error in {self.name}: {str(error)}"
+
